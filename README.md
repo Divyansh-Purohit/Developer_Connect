@@ -1,6 +1,7 @@
 # 1.Title: Developer_Connect
 
 # 2.Methodology:
+![222](https://user-images.githubusercontent.com/63841637/208450044-98c80ede-f554-4040-975b-8c49a52c3260.jpg)
 
 # 3.Description: 
 This project was made keeping in mind to connect the students with similar interest in Thapar University. Here the users can connect with other users and follow them, post something worth value, comment on the latest topics, get to form professional conmection with others, etc. 
