@@ -1,0 +1,25 @@
+{
+    "GET_USER": "/",
+    "POST_LOGIN": "/",
+    "POST_SIGNUP": "/",
+
+    "GET_MY_PROFILE": "/me",
+    "UPDATE_MY_PROFILE": "/",
+    "DELETE_PROFILE": "/",
+    "PUT_EXPERIENCE": "/experience",
+    "DELETE_EXPERIENCE": "/experience/:exp_id",
+    "PUT_EDUCATION": "/education",
+    "DELETE_EDUCATION": "/education/:edu_id",
+    "GET_GITHUB_USERNAME": "/github/:username",
+    "GET_PROFILES": "/",
+    "GET_USER_PROFILE": "/user/:user_id",
+
+    "CREATE_POST": "/",
+    "GET_POST": "/:id",
+    "GET_POSTS": "/",
+    "DELETE_POST": "/:id",
+    "LIKE_POST": "/like/:id",
+    "UNLIKE_POST": "/unlike/:id",
+    "POST_COMMENT": "/comment/:id",
+    "DELETE_COMMENT": "comment/:id/:comment_id"
+}

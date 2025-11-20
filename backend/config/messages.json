@@ -1,0 +1,27 @@
+{
+    "SERVER_ERROR": "Internal Server Error",
+    "UNAUTHORIZED": "Authorization denied",
+    "NOT_FOUND": "Resource not found",
+    "INVALID_CREDENTIALS": "Incorrect credentials",
+    "RESOURCE_NOT_OWNED": "Resource not owned by user",
+
+    "DB_CONN_SUCCESS": "Connected to DB",
+    "DB_CONN_FAILURE": "Could not connect to DB",
+
+    "AUTH_EMAIL_NOT_FOUND": "No account with that email exist",
+    "AUTH_INCORRECT_CRED": "Incorrect credentials",
+    "AUTH_DUPLICATE_EMAIL": "Email already exists",
+    
+    "PROFILE_DELETED": "Your profile has been deleted",
+
+    "POST_DELETED": "Post has been deleted",
+    "POST_ALREADY_LIKED": "Post has been liked already",
+    "POST_NOT_LIKED_YET": "Post has not been liked yet",
+
+    "MIDDLEWARE_ERROR": "Something wrong with auth middleware",
+    "NO_TOKEN": "NO token, authorization denied",
+    "TOKEN_INVALID": "Token is invalid",
+
+    "INVALID_MONGOOSE_ID": "Invalid ID supplied"
+
+}
