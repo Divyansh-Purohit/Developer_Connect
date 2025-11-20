@@ -1,4 +1,3 @@
-const config = require("config");
 const { check } = require("express-validator");
 const express = require("express");
 const router = express.Router();

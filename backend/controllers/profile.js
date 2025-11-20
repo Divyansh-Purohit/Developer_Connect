@@ -19,6 +19,7 @@ const getMyProfile = async (req, res) => {
 
     res.json(profile);
   } catch (err) {
+    console.log(err);
     res.status(500).send(messages.SERVER_ERROR);
   }
 };
@@ -67,6 +68,7 @@ const updateMyProfile = async (req, res) => {
     );
     return res.json(profile);
   } catch (err) {
+    console.log(err);
     return res.status(500).send(messages.SERVER_ERROR);
   }
 };
@@ -81,6 +83,7 @@ const deleteMyProfile = async (req, res) => {
 
     res.json({ msg: messages.PROFILE_DELETED });
   } catch (err) {
+    console.log(err);
     res.status(500).send(messages.SERVER_ERROR);
   }
 };
@@ -104,6 +107,7 @@ const getUserProfile = async ({ params: { user_id } }, res) => {
 
     return res.json(profile);
   } catch (err) {
+    console.log(err);
     return res.status(500).json({ msg: messages.SERVER_ERROR });
   }
 };
@@ -123,6 +127,7 @@ const addExperience = async (req, res) => {
 
     res.json(profile);
   } catch (err) {
+    console.log(err);
     res.status(500).send(messages.SERVER_ERROR);
   }
 };
@@ -158,6 +163,7 @@ const addEducation = async (req, res) => {
 
     res.json(profile);
   } catch (err) {
+    console.log(err);
     res.status(500).send(messages.SERVER_ERROR);
   }
 };
@@ -189,6 +195,7 @@ const getGithubUsername = async (req, res) => {
     const gitHubResponse = await axios.get(uri, { headers });
     return res.json(gitHubResponse.data);
   } catch (err) {
+    console.log(err);
     return res.status(404).json({ msg: messages.NOT_FOUND });
   }
 };

@@ -1,6 +1,7 @@
+const { check } = require("express-validator");
 const express = require("express");
 const router = express.Router();
-const { check } = require("express-validator");
+
 const routes = require("../../config/routes.json");
 const userController = require("../../controllers/user.js");
 

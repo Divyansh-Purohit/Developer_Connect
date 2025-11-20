@@ -1,8 +1,8 @@
-const config = require('config');
-const mongoose = require('mongoose');
-const messages = require('./messages.json');
+const config = require("config");
+const mongoose = require("mongoose");
+const messages = require("./messages.json");
 
-const db = process.env.MONGODBURI || config.get('MONGODBURI');
+const db = process.env.MONGODBURI || config.get("MONGODBURI");
 
 const connectDB = async () => {
   try {
@@ -10,7 +10,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
     });
 
     console.log(messages.DB_CONN_SUCCESS);

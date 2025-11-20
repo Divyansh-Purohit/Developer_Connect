@@ -1,3 +1,4 @@
+const normalize = require("normalize-url");
 const { validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
 const config = require("config");
@@ -5,7 +6,6 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 
 const User = require("../models/User");
-const config = require("config");
 const messages = require("../config/messages.json");
 
 const postSignup = async (req, res) => {
@@ -53,15 +53,16 @@ const postSignup = async (req, res) => {
       },
     };
 
-    const jwt_secret = config.get(JWTSECRET) || process.env.JWTSECRET;
+    const jwt_secret = config.get("JWTSECRET") || process.env.JWTSECRET;
     const expires_in =
-      config.get(TOKEN_EXPIRES_IN) || process.env.TOKEN_EXPIRES_IN;
+      config.get("TOKEN_EXPIRES_IN") || process.env.TOKEN_EXPIRES_IN;
 
     jwt.sign(payload, jwt_secret, { expiresIn: expires_in }, (err, token) => {
       if (err) throw err;
       res.json({ token });
     });
   } catch (err) {
+    console.log(err);
     res.status(500).send(messages.SERVER_ERROR);
   }
 };

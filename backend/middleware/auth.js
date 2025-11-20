@@ -1,16 +1,16 @@
-const jwt = require('jsonwebtoken');
-const config = require('config');
+const jwt = require("jsonwebtoken");
+const config = require("config");
 
-const messages = require('../config/messages.json');
+const messages = require("../config/messages.json");
 
 const auth = (req, res, next) => {
-  const token = req.header('x-auth-token');
+  const token = req.header("x-auth-token");
 
   if (!token) {
     return res.status(401).json({ msg: messages.NO_TOKEN });
   }
   try {
-    const jwt_secret = config.get(JWTSECRET) || process.env.JWTSECRET;
+    const jwt_secret = config.get("JWTSECRET") || process.env.JWTSECRET;
     jwt.verify(token, jwt_secret, (error, decoded) => {
       if (error) {
         return res.status(401).json({ msg: messages.TOKEN_INVALID });
